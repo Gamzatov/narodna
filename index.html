@@ -68,8 +68,8 @@
                         <div class="header-button">
                             <!-- <a href="https://rebrand.ly/slick-ud" rel="nofollow" target="_blank"
                                 class="btn btn-border-filled">Придбати</a> -->
-                            <a href="#about" rel="nofollow" target="_blank"
-                                class="btn btn-border page-scroll">Дізнатися більше</a>
+                            <a href="#about" rel="nofollow" target="_blank" class="btn btn-border page-scroll">Дізнатися
+                                більше</a>
                         </div>
                     </div>
                 </div>
@@ -278,8 +278,74 @@
         </div>
     </section>
     <!-- Client Testimoninals Section End -->
+    <style>
+        .partners_grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+        }
 
+        .item>img {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
 
+        }
+        .item > p > img{
+            max-width: 200px;
+        }
+        @media(max-width:840px){
+            .partners_grid{
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+            }
+            
+        }
+        @media(max-width:560px){
+            .partners_grid{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <section class="partners">
+        <div>
+            <h2 class="section-title" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">Наші Партнери
+            </h2>
+        </div>
+      
+        <div class="partners_grid">
+            <div class="item">
+                <img src="./img/partners/8149c5e3b728467893ace5c86668669b-0001_edited.webp" alt="" class="p_logo">
+            </div>
+            <div class="item">
+                <img src="./img/partners/IMG_0822_edited.webp" alt="" class="p_logo">
+            </div>
+            <div class="item">
+                <p>
+                    <img src="./img/partners/PatriotGood_vectorized-removebg-preview.webp" alt="" class="p_logo">
+                </p>
+                <p>
+                    <img src="./img/partners/IMG_9016_edited.webp" alt="" class="p_logo">
+                </p>
+            </div>
+            <!-- <div class="item">
+      
+    </div> -->
+            <div class="item">
+                <img src="./img/partners/judo.webp" alt="" class="p_logo">
+            </div>
+            <div class="item">
+                <img src="./img/partners/rada.webp" alt="" class="p_logo">
+            </div>
+            <div class="item">
+                <img src="./img/partners/favicon.webp" alt="" class="p_logo">
+            </div>
+        </div>
+    </section>
     <!-- Team section Start -->
     <section id="team" class="section">
         <div class="container">
@@ -584,11 +650,11 @@
             // dropdownContainer: document.body,
             // excludeCountries: ["us"],
             // formatOnDisplay: false,
-            geoIpLookup: function(callback) {
-              $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-                var countryCode = (resp && resp.country) ? resp.country : "";
-                callback(countryCode);
-              });
+            geoIpLookup: function (callback) {
+                $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
             },
             // hiddenInput: "full_number",
             // initialCountry: "auto",
